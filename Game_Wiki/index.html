@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Videogame Wiki</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="header__left">
+      <button id="logo" class="header__logo">🎮 Mini Videogame Wiki</button>
+    </div>
+
+    <form id="search-form" class="header__search-form" role="search">
+      <input type="search" id="search-input" placeholder="Buscar juego..." aria-label="Buscar juego" />
+      <button type="submit" aria-label="Buscar">🔍</button>
+    </form>
+
+    <nav class="header__nav">
+      <button id="faqBtn" class="header__nav-btn" aria-label="Ir a FAQ">FAQ</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Secciones controladas vía JS -->
+    <section id="slideshow-section" class="section"></section>
+    <section id="results-section" class="section"></section>
+    <section id="details-section" class="section"></section>
+    <section id="faq" class="section">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-content">
+        <div class="faq-group">
+          <div class="faq-group-header">
+            <h4 class="text-md">
+              Where does the data come from?
+            </h4>
+            <i class="fas fa-minus"></i>
+          </div>
+          <div class="faq-group-body open">
+            The data comes from the RAWG API
+          </div>
+        </div>
+
+        <div class="faq-group">
+          <div class="faq-group-header">
+            <h4 class="text-md">
+              Can I search any Game?
+            </h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-group-body">
+            Yes, the web uses the RAWG Catalog
+          </div>
+        </div>
+
+        <div class="faq-group">
+          <div class="faq-group-header">
+            <h4 class="text-md">
+              How can I contribute?
+            </h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-group-body">
+            This is an open source project, you can contribute by forking the repository on GitHub and submitting a pull request.
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Educative Proyect - API RAWG.io</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="ui.js"></script>
+  <script src="router.js"></script>
+  <script src="events.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
